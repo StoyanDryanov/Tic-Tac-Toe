@@ -110,8 +110,8 @@ let Game = (() => {
 
     return winCombinations
       .filter((comb) => comb.includes(indexTile))
-      .some((pcomb) =>
-        pcomb.every((i) => Gameboard.getTile(i) === getCurrPlayerMark())
+      .some((comb) =>
+        comb.every((i) => Gameboard.getTile(i) === getCurrPlayerMark())
       );
   };
 

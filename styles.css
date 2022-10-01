@@ -1,13 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+:root {
+    --header-bgc: rgb(153, 167, 153);
+    --button-bgc: rgb(211, 228, 205);
+    --gameboard-bgc: rgb(254, 245, 237);
+    --text-color: rgb(173, 194, 169);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--header-bgc);
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: .2ch;
+    font-size: 60px;
+    color: whitesmoke;
+}
+
+main {
+    height: 100vh;
+    background-color: var(--gameboard-bgc);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.message{
+    font-size: 2rem;
+    color: rgb(60, 60, 60);
+    padding-bottom: 40px;
+}
+
 .gameboard {
+    height: 450px;
+    width: 450px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 300px;
-    height: 300px;
-    gap: 2px;
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .tile {
-    width: 100px;
-    height: 100px;
     border: 1px solid black;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+}
+
+.tile:hover {
+    background-color: aliceblue;
+}
+
+.restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    font-size: 2rem;
+    background-color: var(--button-bgc);
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
 }
